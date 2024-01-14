@@ -1,0 +1,24 @@
+{
+  "checks": {
+    "accounted": {
+      "equals": true
+    },
+    "detections": {
+      "equals": 168
+    },
+    "dropped": {
+      "equals": 0
+    },
+    "processed": {
+      "equals": 84
+    },
+    "produced": {
+      "equals": 84
+    },
+    "queue_capacity": {
+      "equals": 4
+    }
+  },
+  "rationale": "All 168 detections are accounted for.",
+  "synthetic": true
+}
