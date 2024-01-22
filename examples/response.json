@@ -1,0 +1,19 @@
+{
+  "metrics": {
+    "accounted": true,
+    "alerts": 1,
+    "detections": 12,
+    "dropped": 0,
+    "processed": 12,
+    "produced": 12,
+    "queue_capacity": 4
+  },
+  "output": [
+    {
+      "event": "line-region",
+      "stream": 0,
+      "tick": 7,
+      "track": 1
+    }
+  ]
+}
