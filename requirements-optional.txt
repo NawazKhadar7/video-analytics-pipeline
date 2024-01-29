@@ -1,0 +1,2 @@
+# Only required by native/opencv_adapter.py; not used by the tested synthetic pipeline.
+opencv-python>=4.8,<5
