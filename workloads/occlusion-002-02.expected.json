@@ -1,0 +1,21 @@
+{
+  "checks": {
+    "accounted": {
+      "equals": true
+    },
+    "dropped": {
+      "equals": 0
+    },
+    "processed": {
+      "equals": 24
+    },
+    "produced": {
+      "equals": 24
+    },
+    "queue_capacity": {
+      "equals": 4
+    }
+  },
+  "rationale": "Preserve short-lived tracks through missing detections.",
+  "synthetic": true
+}
