@@ -1,0 +1,21 @@
+{
+  "checks": {
+    "accounted": {
+      "equals": true
+    },
+    "dropped": {
+      "equals": 56
+    },
+    "processed": {
+      "equals": 4
+    },
+    "produced": {
+      "equals": 60
+    },
+    "queue_capacity": {
+      "equals": 4
+    }
+  },
+  "rationale": "Use drop-newest admission and reconcile dropped frames.",
+  "synthetic": true
+}
