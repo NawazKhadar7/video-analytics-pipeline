@@ -1,0 +1,6 @@
+{
+  "default": "synthetic-metadata",
+  "iou_threshold": 0.2,
+  "max_age_ticks": 3,
+  "weights_supplied": false
+}
