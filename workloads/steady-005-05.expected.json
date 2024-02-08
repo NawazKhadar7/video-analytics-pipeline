@@ -1,0 +1,21 @@
+{
+  "checks": {
+    "accounted": {
+      "equals": true
+    },
+    "dropped": {
+      "equals": 0
+    },
+    "processed": {
+      "equals": 60
+    },
+    "produced": {
+      "equals": 60
+    },
+    "queue_capacity": {
+      "equals": 4
+    }
+  },
+  "rationale": "Track one synthetic object per camera.",
+  "synthetic": true
+}
