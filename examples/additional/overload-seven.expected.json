@@ -1,0 +1,24 @@
+{
+  "checks": {
+    "accounted": {
+      "equals": true
+    },
+    "detections": {
+      "equals": 4
+    },
+    "dropped": {
+      "equals": 80
+    },
+    "processed": {
+      "equals": 4
+    },
+    "produced": {
+      "equals": 84
+    },
+    "queue_capacity": {
+      "equals": 4
+    }
+  },
+  "rationale": "Four frames are admitted and eighty are explicitly dropped.",
+  "synthetic": true
+}
