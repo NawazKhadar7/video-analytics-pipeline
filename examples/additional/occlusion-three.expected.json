@@ -1,0 +1,24 @@
+{
+  "checks": {
+    "accounted": {
+      "equals": true
+    },
+    "detections": {
+      "equals": 27
+    },
+    "dropped": {
+      "equals": 0
+    },
+    "processed": {
+      "equals": 36
+    },
+    "produced": {
+      "equals": 36
+    },
+    "queue_capacity": {
+      "equals": 4
+    }
+  },
+  "rationale": "Missing boxes must not become dropped frames.",
+  "synthetic": true
+}
