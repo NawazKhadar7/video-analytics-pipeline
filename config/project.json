@@ -1,0 +1,47 @@
+{
+  "algorithm": "IoU intersection/union produces the matching score. Tracks expire after max_age ticks; greedy assignments prevent two detections sharing one track in a frame. Queue admission separates produced, processed and dropped counters.",
+  "architecture": "Synthetic frame iterator \u2192 bounded asyncio queue \u2192 metadata detector \u2192 camera-local tracker \u2192 line-region events \u2192 JSON dashboard.",
+  "data_model": "Frame = stream, tick, boxes. Box = x1,y1,x2,y2. Track records include stable local IDs and last-seen ticks. Metrics include exact conservation.",
+  "description": "A bounded asynchronous ingestion and tracking reference with explicit overload accounting and event extraction.",
+  "design": "A bounded queue exposes the throughput/latency tradeoff. Missing detections are not dropped frames. Event alerts are region observations, not unique crossing counts.",
+  "families": [
+    "steady",
+    "crossing",
+    "overload",
+    "missing",
+    "bursty",
+    "occlusion"
+  ],
+  "family_notes": [
+    "Track one synthetic object per camera.",
+    "Track two moving objects on separate lanes.",
+    "Use drop-newest admission and reconcile dropped frames.",
+    "Frames with no detections must remain accounted for.",
+    "Exercise queue backpressure with a dense producer burst.",
+    "Preserve short-lived tracks through missing detections."
+  ],
+  "file_count": 165,
+  "limitations": "Default frames contain synthetic boxes, not images, audio or pretrained detections. There is no YOLO, INT8 inference, Kafka, WebSocket transport or GPU validation. Steady producers yield between frames; burst producers push until backpressure blocks them. IoU matching is greedy and cannot reliably resolve severe occlusion. A finite queue must backpressure or drop under overload.",
+  "numpy": false,
+  "operations": "Choose backpressure when the source can wait; use a documented discard policy for a live source. Integrate capture and inference behind the detector interface and measure queue delay separately.",
+  "scope": "Bounded frame queue, backpressure/drop policies, IoU association, per-camera tracking, synthetic line alerts and an optional OpenCV frame-count adapter.",
+  "security": "Treat this as educational code; review it before handling trusted data.",
+  "sizes": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "slug": "video-analytics-pipeline",
+  "title": "Real-Time Multimodal Video Analytics Pipeline",
+  "topics": [
+    "computer-vision",
+    "asyncio",
+    "tracking",
+    "video-analytics",
+    "systems"
+  ],
+  "workload_count": 36
+}
